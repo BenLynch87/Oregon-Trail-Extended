@@ -12,8 +12,4 @@ class Traveler{
     eat(){
         if (this.food > 0){ this.food--} else {this.isHealthy = false}
     }
-
-    getHealth(){
-        return this.isHealthy
-    }
 }

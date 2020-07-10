@@ -13,10 +13,7 @@ class Wagon{
     }
 
     shouldQuarantine(){
-        for (const passenger of this.passengers){
-            if (passenger.getHealth() === false){return true}
-        }
-        return false
+        return this.passengers.some(passenger => passenger.getHealth() !== true)
     }
 
     totalFood(){

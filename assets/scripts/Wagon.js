@@ -17,6 +17,12 @@ class Wagon{
     }
 
     totalFood(){
-        return this.passengers.reduce(passenger => passenger.food)
+        let total = 0
+        for (const passenger of this.passengers){
+            total += passenger.food
+        }
+        return total
+        //throws an uncaught type error - demand an explaination for this bullshit
+        //return this.passengers.reduce(passenger => passenger.food)
     }
 }
